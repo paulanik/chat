@@ -1,4 +1,6 @@
 CMD:
+avdmanager list avd
+avdmanager delete avd -n Android12
 emulator -list-avds
 emulator -avd Android12
 ______________________________________
