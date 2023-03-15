@@ -1,3 +1,16 @@
+CMD:
+emulator -list-avds
+emulator -avd Android12
+______________________________________
+4 steps to create new emulator/device
+--------------------------------------
+sdkmanager "build-tools;31.0.0"
+sdkmanager "platforms;android-31"
+sdkmanager "system-images;android-31;google_apis;x86_64"
+avdmanager create avd --name "Android12" --package "system-images;android-31;google_apis;x86_64"
+____________________________________________
+LINKS:
+
 https://console.firebase.google.com/
 
 https://console.cloud.google.com/apis/api/firebaseinappmessaging.googleapis.com/metrics?authuser=7&project=flutter-avc&supportedpurview=project
