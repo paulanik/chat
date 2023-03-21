@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>770956872824-i7a6bra2mia2m51ad8406ssr19n04nh0.apps.googleusercontent.com</string>
+	<string>770956872824-dj8qtvb61reidiaga40dfee17senklsa.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.770956872824-i7a6bra2mia2m51ad8406ssr19n04nh0</string>
+	<string>com.googleusercontent.apps.770956872824-dj8qtvb61reidiaga40dfee17senklsa</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>770956872824-903f6evi7lbmsir7g4fp6rt9rd80mgsi.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBYjmMvqkPqfnTucAuNc4freieOzGjD8mc</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.dbestech.chatty</string>
+	<string>com.tstartup.chat</string>
 	<key>PROJECT_ID</key>
 	<string>flutter-avc</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:770956872824:ios:f4e2eed6bd78483da1b18d</string>
+	<string>1:770956872824:ios:c8ff597db6e3eaa5a1b18d</string>
 </dict>
 </plist>

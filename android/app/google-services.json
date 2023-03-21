@@ -7,14 +7,14 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:770956872824:android:2dd3af97237e5c6aa1b18d",
+        "mobilesdk_app_id": "1:770956872824:android:67bb090e7045174ca1b18d",
         "android_client_info": {
-          "package_name": "com.dbestech.chatty"
+          "package_name": "com.tstartup.chat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "770956872824-oq2p5sfg9rlhk11bv225e68piat1si9f.apps.googleusercontent.com",
+          "client_id": "770956872824-cj1i819hft05nfq2n7gk6pbve45kv9fk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +27,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "770956872824-oq2p5sfg9rlhk11bv225e68piat1si9f.apps.googleusercontent.com",
+              "client_id": "770956872824-cj1i819hft05nfq2n7gk6pbve45kv9fk.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "770956872824-i7a6bra2mia2m51ad8406ssr19n04nh0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dbestech.chatty"
+              }
             }
           ]
         }

@@ -48,7 +48,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyBvR-fqxWZRgVcsYRjIh9IdBLNmLmszyWE',
-    appId: '1:770956872824:web:c64bfe98e203b52ca1b18d',
+    appId: '1:770956872824:web:5a20d20714b71646a1b18d',
     messagingSenderId: '770956872824',
     projectId: 'flutter-avc',
     authDomain: 'flutter-avc.firebaseapp.com',
@@ -57,7 +57,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCYoflH933Ue0ICPAabs-i5-o2sMfNGBh4',
-    appId: '1:770956872824:android:2dd3af97237e5c6aa1b18d',
+    appId: '1:770956872824:android:67bb090e7045174ca1b18d',
     messagingSenderId: '770956872824',
     projectId: 'flutter-avc',
     storageBucket: 'flutter-avc.appspot.com',
@@ -65,11 +65,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBYjmMvqkPqfnTucAuNc4freieOzGjD8mc',
-    appId: '1:770956872824:ios:f4e2eed6bd78483da1b18d',
+    appId: '1:770956872824:ios:c8ff597db6e3eaa5a1b18d',
     messagingSenderId: '770956872824',
     projectId: 'flutter-avc',
     storageBucket: 'flutter-avc.appspot.com',
-    iosClientId: '770956872824-i7a6bra2mia2m51ad8406ssr19n04nh0.apps.googleusercontent.com',
-    iosBundleId: 'com.dbestech.chatty',
+    androidClientId: '770956872824-903f6evi7lbmsir7g4fp6rt9rd80mgsi.apps.googleusercontent.com',
+    iosClientId: '770956872824-dj8qtvb61reidiaga40dfee17senklsa.apps.googleusercontent.com',
+    iosBundleId: 'com.tstartup.chat',
   );
 }
