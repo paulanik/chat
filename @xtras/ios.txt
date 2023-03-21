@@ -1,0 +1,5 @@
+time: (Hour.Min)
+1. 2.41 min
+2. 3.05 min
+3. 3.06
+4. 3.14 min

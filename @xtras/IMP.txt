@@ -11,6 +11,12 @@ sdkmanager "platforms;android-31"
 sdkmanager "system-images;android-31;google_apis;x86_64"
 avdmanager create avd --name "Android12" --package "system-images;android-31;google_apis;x86_64"
 ____________________________________________
+Firebase Project:
+flutterFire configure
+SHA1:
+keytool -list -v -keystore C:\Users\anikk\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android
+____________________________________________
+
 LINKS:
 
 https://console.firebase.google.com/
