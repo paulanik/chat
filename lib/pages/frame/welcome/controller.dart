@@ -1,5 +1,5 @@
-import 'package:chatty/common/routes/names.dart';
-import 'package:chatty/pages/frame/welcome/state.dart';
+import 'package:chat/common/routes/names.dart';
+import 'package:chat/pages/frame/welcome/state.dart';
 import 'package:get/get.dart';
 
 class WelcomeController extends GetxController {

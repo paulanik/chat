@@ -1,4 +1,4 @@
-import 'package:chatty/common/entities/entities.dart';
+import 'package:chat/common/entities/entities.dart';
 import 'package:get/get.dart';
 
 class MessageState{

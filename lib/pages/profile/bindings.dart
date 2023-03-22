@@ -1,4 +1,4 @@
-import 'package:chatty/pages/profile/controller.dart';
+import 'package:chat/pages/profile/controller.dart';
 import 'package:get/get.dart';
 
 class ProfileBinding implements Bindings{

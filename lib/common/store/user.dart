@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:chatty/common/entities/entities.dart';
-import 'package:chatty/common/routes/names.dart';
-import 'package:chatty/common/services/services.dart';
-import 'package:chatty/common/values/values.dart';
+import 'package:chat/common/entities/entities.dart';
+import 'package:chat/common/routes/names.dart';
+import 'package:chat/common/services/services.dart';
+import 'package:chat/common/values/values.dart';
 import 'package:get/get.dart';
 
 class UserStore extends GetxController {
@@ -56,10 +56,10 @@ class UserStore extends GetxController {
   // during logout
   Future<void> onLogout() async {
    // if (_isLogin.value) await UserAPI.logout();
-    await StorageService.to.remove(STORAGE_USER_TOKEN_KEY);
+    /*await StorageService.to.remove(STORAGE_USER_TOKEN_KEY);
     await StorageService.to.remove(STORAGE_USER_PROFILE_KEY);
     _isLogin.value = false;
-    token = '';
+    token = '';*/
     Get.offAllNamed(AppRoutes.SIGN_IN);
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chatty/common/values/values.dart';
+import 'package:chat/common/values/values.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 ///
