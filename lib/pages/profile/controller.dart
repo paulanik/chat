@@ -11,13 +11,13 @@ class ProfileController extends GetxController {
   final title = "Chat .";
   final state = ProfileState();
 
-  @override
-  void onReady() {
-    super.onReady();
-    // print(" WelcomeController ");
-    Future.delayed(
-        const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.Message));
-  }
+  // @override
+  // void onReady() {
+  //   super.onReady();
+  //   // print(" WelcomeController ");
+  //   Future.delayed(
+  //       const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.Message));
+  // }
 
   Future<void> goLogout() async {
     await GoogleSignIn().signOut();
