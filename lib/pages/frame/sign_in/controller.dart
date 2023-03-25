@@ -59,7 +59,7 @@ class SignInController extends GetxController {
       '/api/index'
     );
     print(response);
-    // UserStore.to.setIsLogin=true;
+    UserStore.to.setIsLogin=true;
     Get.offAllNamed(AppRoutes.Message);
   }
 }
