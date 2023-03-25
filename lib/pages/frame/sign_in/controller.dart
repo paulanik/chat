@@ -1,5 +1,7 @@
 import 'package:chat/common/entities/entities.dart';
 import 'package:chat/common/routes/names.dart';
+import 'package:chat/common/store/user.dart';
+import 'package:chat/common/utils/http.dart';
 import 'package:chat/pages/frame/sign_in/state.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
@@ -51,8 +53,13 @@ class SignInController extends GetxController {
     }
   }
 
-  asyncPostAllData(){
-    print("....let's go to message page");
+  asyncPostAllData() async {
+    print("....let's go to message page...");
+    var response= await HttpUtil().get(
+      '/api/index'
+    );
+    print(response);
+    // UserStore.to.setIsLogin=true;
     Get.offAllNamed(AppRoutes.Message);
   }
 }
