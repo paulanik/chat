@@ -27,7 +27,7 @@ class HttpUtil {
       baseUrl: SERVER_API_URL,
 
       // baseUrl: storage.read(key: STORAGE_KEY_APIURL) ?? SERVICE_API_BASEURL,
-      //连接服务器超时时间，单位是毫秒.
+      //连接服务器超时时间，单位是毫秒.-Connection server timeout, in milliseconds.
       connectTimeout: 10000,
 
       // 响应流上前后两次接受到数据的间隔，单位为毫秒。
@@ -98,7 +98,7 @@ class HttpUtil {
    * error统一处理
    */
 
-  // 错误处理
+  // 错误处理-error handling
   void onError(ErrorEntity eInfo) {
     print('error.code -> ' +
         eInfo.code.toString() +
@@ -110,24 +110,24 @@ class HttpUtil {
         EasyLoading.showError(eInfo.message);
         break;
       default:
-        EasyLoading.showError('未知错误');
+        EasyLoading.showError('未知错误-unknown mistake');
         break;
     }
   }
 
-  // 错误信息
+  // 错误信息-error message
   ErrorEntity createErrorEntity(DioError error) {
     switch (error.type) {
       case DioErrorType.cancel:
-        return ErrorEntity(code: -1, message: "请求取消");
+        return ErrorEntity(code: -1, message: "请求取消-request to cancel");
       case DioErrorType.connectTimeout:
-        return ErrorEntity(code: -1, message: "连接超时");
+        return ErrorEntity(code: -1, message: "连接超时-Connection timed out");
       case DioErrorType.sendTimeout:
-        return ErrorEntity(code: -1, message: "请求超时");
+        return ErrorEntity(code: -1, message: "请求超时-Request timed out");
       case DioErrorType.receiveTimeout:
-        return ErrorEntity(code: -1, message: "响应超时");
+        return ErrorEntity(code: -1, message: "响应超时-response timeout");
       case DioErrorType.cancel:
-        return ErrorEntity(code: -1, message: "请求取消");
+        return ErrorEntity(code: -1, message: "请求取消-request to cancel");
       case DioErrorType.response:
         {
           try {
@@ -137,26 +137,26 @@ class HttpUtil {
             // return ErrorEntity(code: errCode, message: errMsg);
             switch (errCode) {
               case 400:
-                return ErrorEntity(code: errCode, message: "请求语法错误");
+                return ErrorEntity(code: errCode, message: "请求语法错误-request syntax error");
               case 401:
-                return ErrorEntity(code: errCode, message: "没有权限");
+                return ErrorEntity(code: errCode, message: "没有权限-permission denied");
               case 403:
-                return ErrorEntity(code: errCode, message: "服务器拒绝执行");
+                return ErrorEntity(code: errCode, message: "服务器拒绝执行-The server refuses to execute");
               case 404:
-                return ErrorEntity(code: errCode, message: "无法连接服务器");
+                return ErrorEntity(code: errCode, message: "无法连接服务器-can not reach server");
               case 405:
-                return ErrorEntity(code: errCode, message: "请求方法被禁止");
+                return ErrorEntity(code: errCode, message: "请求方法被禁止-request method is forbidden");
               case 500:
-                return ErrorEntity(code: errCode, message: "服务器内部错误");
+                return ErrorEntity(code: errCode, message: "服务器内部错误-internal server error");
               case 502:
-                return ErrorEntity(code: errCode, message: "无效的请求");
+                return ErrorEntity(code: errCode, message: "无效的请求-invalid request");
               case 503:
-                return ErrorEntity(code: errCode, message: "服务器挂了");
+                return ErrorEntity(code: errCode, message: "服务器挂了-server down");
               case 505:
-                return ErrorEntity(code: errCode, message: "不支持HTTP协议请求");
+                return ErrorEntity(code: errCode, message: "不支持HTTP协议请求-Does not support HTTP protocol requests");
               default:
                 {
-                  // return ErrorEntity(code: errCode, message: "未知错误");
+                  // return ErrorEntity(code: errCode, message: "未知错误-unknown mistake");
                   return ErrorEntity(
                     code: errCode,
                     message: error.response != null
@@ -166,7 +166,7 @@ class HttpUtil {
                 }
             }
           } on Exception catch (_) {
-            return ErrorEntity(code: -1, message: "未知错误");
+            return ErrorEntity(code: -1, message: "未知错误-unknown mistake");
           }
         }
       default:
@@ -186,7 +186,7 @@ class HttpUtil {
     token.cancel("cancelled");
   }
 
-  /// 读取本地配置
+  /// 读取本地配置-read local configuration
   Map<String, dynamic>? getAuthorizationHeader() {
     var headers = <String, dynamic>{};
     if (Get.isRegistered<UserStore>() && UserStore.to.hasToken == true) {

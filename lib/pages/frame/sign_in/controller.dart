@@ -50,7 +50,7 @@ class SignInController extends GetxController {
         }
       }else{
         if (kDebugMode) {
-          print("...login type not sue...");
+          print("...login type not sure...");
         }
       }
     }catch(e){

@@ -69,7 +69,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '770956872824',
     projectId: 'flutter-avc',
     storageBucket: 'flutter-avc.appspot.com',
-    androidClientId: '770956872824-903f6evi7lbmsir7g4fp6rt9rd80mgsi.apps.googleusercontent.com',
+    androidClientId: '770956872824-4tdgpiqt5t05cntj5mh05nc1ru5t1ghs.apps.googleusercontent.com',
     iosClientId: '770956872824-dj8qtvb61reidiaga40dfee17senklsa.apps.googleusercontent.com',
     iosBundleId: 'com.tstartup.chat',
   );

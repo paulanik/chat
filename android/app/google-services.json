@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "770956872824-4tdgpiqt5t05cntj5mh05nc1ru5t1ghs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tstartup.chat",
+            "certificate_hash": "983ff2850ba293510facee1a1b1277cfc581db81"
+          }
+        },
+        {
           "client_id": "770956872824-cj1i819hft05nfq2n7gk6pbve45kv9fk.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -31,10 +39,10 @@
               "client_type": 3
             },
             {
-              "client_id": "770956872824-i7a6bra2mia2m51ad8406ssr19n04nh0.apps.googleusercontent.com",
+              "client_id": "770956872824-dj8qtvb61reidiaga40dfee17senklsa.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.dbestech.chat"
+                "bundle_id": "com.tstartup.chat"
               }
             }
           ]
