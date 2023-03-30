@@ -1,4 +1,5 @@
 import 'package:chat/common/values/colors.dart';
+import 'package:chat/pages/contact/widgets/contact_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -7,23 +8,19 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class WelcomePage extends GetView<WelcomeController> {
-  // const WelcomePage({super.key});
-  const WelcomePage({Key? key}) : super(key: key);
-
-  Widget _buildPageHeadTitle(String title){
-    return Container(
-      margin: EdgeInsets.only(top: 350),
-      child: Text(
-        title,
-        textAlign: TextAlign.center,
+class ContactPage extends GetView<ContactController> {
+  // const ContactPage({super.key});
+  const ContactPage({Key? key}) : super(key: key);
+  AppBar _buildAppBar(){
+    return AppBar(
+      title:Text(
+        "Contact",
         style: TextStyle(
-          color: AppColors.primaryElementText,
-          fontFamily: "Montserrat",
-          fontWeight: FontWeight.bold,
-          fontSize: 45.sp
+          color: AppColors.primaryText,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.normal
         ),
-        ),
+      ),
     );
   }
 
@@ -31,11 +28,11 @@ class WelcomePage extends GetView<WelcomeController> {
   Widget build(BuildContext context) {
     // return const Placeholder();
     return Scaffold(
-      backgroundColor: AppColors.primaryElement,
+      appBar: _buildAppBar(),
       body:Container(
         width: 360.w,
         height: 780.h,
-        child: _buildPageHeadTitle(controller.title),
+        child: ContactList()
       )
     );
   }

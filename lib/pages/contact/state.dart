@@ -1,3 +1,3 @@
-class WelcomeState{
+class ContactState{
   
 }

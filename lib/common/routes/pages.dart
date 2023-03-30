@@ -4,6 +4,7 @@ import 'package:chat/common/middlewares/middlewares.dart';
 
 import 'package:get/get.dart';
 
+import '../../pages/contact/index.dart';
 import '../../pages/frame/welcome/index.dart';
 import '../../pages/frame/sign_in/index.dart';
 import '../../pages/message/index.dart';
@@ -45,11 +46,14 @@ class AppPages {
     GetPage(name: AppRoutes.Forgot, page: () => ForgotPage(), binding: ForgotBinding()),
     GetPage(name: AppRoutes.Phone, page: () => PhonePage(), binding: PhoneBinding()),
     GetPage(name: AppRoutes.SendCode, page: () => SendCodePage(), binding: SendCodeBinding()),
+    */
     
+    // contact page
+    GetPage(name: AppRoutes.Contact, 
+    page: () => const ContactPage(), 
+    binding: ContactBinding()),
     
-    // 首页
-    GetPage(name: AppRoutes.Contact, page: () => ContactPage(), binding: ContactBinding()),
-    *///message page
+    //message page
     GetPage(name: AppRoutes.Message, page: () => const MessagePage(),
      binding: MessageBinding(),
      middlewares: [

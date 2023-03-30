@@ -1,10 +1,10 @@
-import 'package:chat/pages/frame/welcome/controller.dart';
 import 'package:get/get.dart';
+import 'controller.dart';
 
-class WelcomeBinding implements Bindings{
+class ContactBinding implements Bindings{
   @override
   void dependencies() {
-    Get.lazyPut<WelcomeController>(() => WelcomeController());
+    Get.lazyPut<ContactController>(() => ContactController());
   }
-
+  
 }
