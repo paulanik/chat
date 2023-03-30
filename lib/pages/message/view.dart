@@ -1,6 +1,7 @@
 import 'package:chat/common/values/colors.dart';
 import 'package:chat/pages/frame/welcome/controller.dart';
 import 'package:chat/pages/message/controller.dart';
+import 'package:chat/pages/contact/controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,7 +41,6 @@ class MessagePage extends GetView<MessageController> {
                       Image(image: AssetImage("assets/images/account_header.png"),):
                       Text("hi"),
                     ),
-
                     onTap: (){
                       controller.goProfile();
                     },
@@ -69,6 +69,67 @@ class MessagePage extends GetView<MessageController> {
     );
   }
 
+  
+  Widget _buildContactPage(){
+    return Center(
+        child: Container(
+          width: 320.w,
+          height: 44.w,
+          margin: EdgeInsets.only(left: 280.h, top: 680.h),
+          child: Row(
+            children: [
+              Stack(
+                children: [
+                  GestureDetector(
+                    child: Container(
+                      width: 44.h,
+                      height: 44.h,
+                      decoration: BoxDecoration(
+                        color: AppColors.primarySecondaryBackground,
+                        borderRadius: BorderRadius.all(Radius.circular(22.h)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.1),
+                            spreadRadius: 1,
+                            blurRadius: 2,
+                            offset: const Offset(0, 1)
+                          )
+                        ]
+                      ),
+                      child: controller.state.head_detail.value.avatar==null?
+                      Image(image: AssetImage("assets/images/ic_launcher.png"),):
+                      Text("hi"),
+                    ),
+                    onTap: (){
+                      controller.goContact();
+                    },
+                  ),
+                  Positioned(
+                    bottom: 5.w,
+                    right: 0.w,
+                    height: 14.w,
+                    child: Container(
+                    width: 14.w,
+                    height: 14.w,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 2.w,
+                        color: AppColors.primaryElementText
+                      ),
+                      color: AppColors.primaryElementStatus,
+                      borderRadius: BorderRadius.all(Radius.circular(12.w))
+                    ),
+                  ))
+                ],
+              )
+            ],
+          ),
+        ),
+    );
+  }
+
+  
+
   @override
   Widget build(BuildContext context) {
     // return const Placeholder();
@@ -83,7 +144,8 @@ class MessagePage extends GetView<MessageController> {
                       title: _headBar(),
                     )
                   ],
-                )
+                ),
+                _buildContactPage(),
               ],
             ),
           )
