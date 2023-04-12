@@ -77,8 +77,9 @@ class LoginController extends Controller{
             "avatar",
             "description",
             "online",
-            "token"
-        )->where("token", '!=', $token->get());
+            "token",
+            "name"
+        )->where("token", '!=', $token)->get();
 
         return ["code"=>0, 'data'=>$res, "msg"=>"got all the users info"];
     }

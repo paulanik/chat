@@ -1,9 +1,6 @@
 import 'package:chat/common/values/colors.dart';
 import 'package:chat/pages/contact/widgets/contact_list.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,14 +23,14 @@ class ContactPage extends GetView<ContactController> {
 
   @override
   Widget build(BuildContext context) {
-    // return const Placeholder();
     return Scaffold(
+
       appBar: _buildAppBar(),
-      body:Container(
+      body: Container(
         width: 360.w,
         height: 780.h,
         child: ContactList()
-      )
+      ),
     );
   }
 }

@@ -20,6 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['namespace'=>'Api'], function(){
     Route::any('/login', 'LoginController@login');
-    Route::any('/get_profile', 'LoginController@get_profile');
-    Route::any('/get_profile', 'LoginController@contact');
+    // Route::any('/get_profile', 'LoginController@get_profile');
+    // Route::any('/contact', 'LoginController@contact')->middleware('CheckUser');
+    Route::any('/contact', 'LoginController@contact');
 });
