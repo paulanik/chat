@@ -32,6 +32,7 @@ class ContactController extends GetxController {
       ).where("from_token", isEqualTo: token).where("to_token", 
       isEqualTo: contactItem.token)
       .get();
+      print("...from_messages ${from_messages.docs.isNotEmpty}");
 
       var to_messages = await db.collection("message").withConverter(
       fromFirestore: Msg.fromFirestore,
@@ -39,10 +40,12 @@ class ContactController extends GetxController {
       ).where("from_token", isEqualTo: contactItem.token).where("to_token", 
       isEqualTo: token)
       .get();
+      print("...to_messages ${to_messages.docs.isNotEmpty}");
+
 
       if(from_messages.docs.isEmpty&&to_messages.docs.isEmpty){
         var profile = UserStore.to.profile;
-        Msg(
+        var msgdata = Msg(
           from_token: profile.token,
           to_token: contactItem.token,
           from_name: profile.name,
@@ -59,7 +62,21 @@ class ContactController extends GetxController {
         var doc_id = await db.collection("message").withConverter(
           fromFirestore: Msg.fromFirestore,
           toFirestore: (Msg msg, options)=>msg.toFirestore()
-        );
+        ).add(msgdata);
+        
+        Get.offAllNamed("/chat",
+          parameters: {
+            "doc_id":doc_id.id,
+            "to_token":contactItem.token??"",
+            "to_name":contactItem.name??"",
+            "to_avatar":contactItem.avatar??"",
+            "to_online":contactItem.online.toString()
+          }
+        ); 
+
+        print("...creating new document and adding user info done...");
+      }else{
+        print("...users are older...");
       }
     }
 
