@@ -8,17 +8,27 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class WelcomePage extends GetView<WelcomeController> {
+class ChatPage extends GetView<ChatController> {
   // const WelcomePage({super.key});
-  const WelcomePage({Key? key}) : super(key: key);
+  const ChatPage({Key? key}) : super(key: key);
 
-
+  AppBar _buildAppBar(){
+    return AppBar(
+      title:Obx((){
+        return Container(
+          child: Text(
+            "${controller.state.to_name}"
+          ),
+        );
+      })
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     // return const Placeholder();
     return Scaffold(
-      appBar: _buildApp(),
+      appBar: _buildAppBar(),
     );
   }
 }
