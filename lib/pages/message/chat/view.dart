@@ -81,15 +81,16 @@ class ChatPage extends GetView<ChatController> {
     // return const Placeholder();
     return Scaffold(
       appBar: _buildAppBar(),
-      body: SafeArea(
+      body: Obx(() => SafeArea(
         child: Stack(
           children: [
             Positioned(
               bottom: 0.h,
               child: Container(
                 width: 360.w,
-                padding: EdgeInsets.only(left: 20.w, bottom: 10.w),
+                padding: EdgeInsets.only(left: 20.w, bottom: 10.w, right: 20.w),
                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: 270.w,
@@ -130,19 +131,168 @@ class ChatPage extends GetView<ChatController> {
                                     color: Colors.transparent,
                                   )
                                 ),
+                                hintStyle: const TextStyle(
+                                  color: AppColors.primarySecondaryElementText
+                                )
                               ),
                             ),
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              width: 40.w,
+                              height: 40.w,
+                              child: Image.asset("assets/icons/send.png"),
+                            ),
+                            onTap: (){
+
+                            },
                           )
-                        ]
+                        ],
                       ),
-                    )
+                    ),
+                    GestureDetector(
+                      child: Container(
+                        height: 40.w,
+                        width: 40.w,
+                        padding: EdgeInsets.all(8.w),
+                        decoration: BoxDecoration(
+                          color: AppColors.primaryElement,
+                          borderRadius: BorderRadius.circular(40.w),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              spreadRadius: 2,
+                              blurRadius: 2,
+                              offset: Offset(1, 1)
+                            )
+                          ]
+                        ),
+                        child: Image.asset("assets/icons/add.png"),
+                      ),
+                      onTap: (){
+                        controller.goMore();
+                      },
+                    ),
+                    
                   ],
                 )
               ),
-            )
+            ),
+            controller.state.more_status.value?Positioned(
+                      right: 20.w,
+                      bottom: 70.h,
+                      height: 200.h,
+                      width: 40.w,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          GestureDetector(
+                            child: Container(
+                              height: 40.h,
+                              width: 40.h,
+                              padding: EdgeInsets.all(10.w),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40.w),
+                                color: AppColors.primaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.2),
+                                    spreadRadius: 2,
+                                    blurRadius: 2,
+                                    offset: Offset(1, 1)
+                                  )
+                                ]
+                              ),
+                              child: Image.asset(
+                                "assets/icons/file.png"
+                              ),
+                            ),
+                            onTap: (){
+                              
+                            },
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 40.h,
+                              width: 40.h,
+                              padding: EdgeInsets.all(10.w),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40.w),
+                                color: AppColors.primaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.2),
+                                    spreadRadius: 2,
+                                    blurRadius: 2,
+                                    offset: Offset(1, 1)
+                                  )
+                                ]
+                              ),
+                              child: Image.asset(
+                                "assets/icons/photo.png"
+                              ),
+                            ),
+                            onTap: (){
+                              
+                            },
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 40.h,
+                              width: 40.h,
+                              padding: EdgeInsets.all(10.w),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40.w),
+                                color: AppColors.primaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.2),
+                                    spreadRadius: 2,
+                                    blurRadius: 2,
+                                    offset: Offset(1, 1)
+                                  )
+                                ]
+                              ),
+                              child: Image.asset(
+                                "assets/icons/call.png"
+                              ),
+                            ),
+                            onTap: (){
+                              
+                            },
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 40.h,
+                              width: 40.h,
+                              padding: EdgeInsets.all(10.w),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40.w),
+                                color: AppColors.primaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.2),
+                                    spreadRadius: 2,
+                                    blurRadius: 2,
+                                    offset: Offset(1, 1)
+                                  )
+                                ]
+                              ),
+                              child: Image.asset(
+                                "assets/icons/video.png"
+                              ),
+                            ),
+                            onTap: (){
+                              
+                            },
+                          )
+                        ],
+                      ),
+                    ):Container()         
           ],
         ),
-      ),
+      )),
+    
     );
   }
 }
