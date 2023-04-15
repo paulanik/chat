@@ -75,7 +75,7 @@ class ContactController extends GetxController {
         ); 
 
       }else{
-        if(from_messages.docs.first.id.isNotEmpty){
+        if(from_messages.docs.isNotEmpty){
           Get.toNamed("/chat",
           parameters: {
             "doc_id":from_messages.docs.first.id,
@@ -88,29 +88,30 @@ class ContactController extends GetxController {
         }
 
         // if(to_messages.docs.first.id.isNotEmpty){
-        //   Get.toNamed("/chat",
-        //   parameters: {
-        //     "doc_id":to_messages.docs.first.id,
-        //     "to_token":contactItem.token??"",
-        //     "to_name":contactItem.name??"",
-        //     "to_avatar":contactItem.avatar??"",
-        //     "to_online":contactItem.online.toString()
-        //   }
-        // );
-        // }
-
-        if (to_messages.docs.isNotEmpty) {
-          final firstDoc = to_messages.docs.first;
+        if(to_messages.docs.isNotEmpty){
           Get.toNamed("/chat",
           parameters: {
-            "doc_id": firstDoc.id,
-            "to_token": contactItem.token ?? "",
-            "to_name": contactItem.name ?? "",
-            "to_avatar": contactItem.avatar ?? "",
-            "to_online": contactItem.online.toString(),
+            "doc_id":to_messages.docs.first.id,
+            "to_token":contactItem.token??"",
+            "to_name":contactItem.name??"",
+            "to_avatar":contactItem.avatar??"",
+            "to_online":contactItem.online.toString()
           }
         );
-      }
+        }
+
+      //   if (to_messages.docs.isNotEmpty) {
+      //     final firstDoc = to_messages.docs.first;
+      //     Get.toNamed("/chat",
+      //     parameters: {
+      //       "doc_id": firstDoc.id,
+      //       "to_token": contactItem.token ?? "",
+      //       "to_name": contactItem.name ?? "",
+      //       "to_avatar": contactItem.avatar ?? "",
+      //       "to_online": contactItem.online.toString(),
+      //     }
+      //   );
+      // }
 
       }
     }

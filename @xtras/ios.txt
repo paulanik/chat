@@ -6,3 +6,4 @@ ios_time: (Hour.Min)
 2. 3.05 min
 3. 3.06
 4. 3.14 min
+5. 5.07
