@@ -1,3 +1,7 @@
+APK Build:
+flutter build apk --build-name=1.0 --build-number=1
+___________________________________________________
+
 CMD:
 avdmanager list avd
 avdmanager delete avd -n Android12
