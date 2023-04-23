@@ -38,7 +38,7 @@ class MessagePage extends GetView<MessageController> {
                         ]
                       ),
                       child: controller.state.head_detail.value.avatar==null?
-                      Image(image: AssetImage("assets/images/love.png"),):
+                      Image(image: AssetImage("assets/images/account_header.png"),):
                       Text("hi"),
                     ),
                     onTap: (){

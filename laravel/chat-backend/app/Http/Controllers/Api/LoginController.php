@@ -40,7 +40,7 @@ class LoginController extends Controller{
             'online')
             ->where($map)->first();
         if(empty($result)){
-            $vlaidated['token'] = md5(uniqid().rand(10000, 99999));
+            $validated['token'] = md5(uniqid().rand(10000, 99999));
             $validated['created_at'] = Carbon::now();
             $validated['access_token'] = md5(uniqid().rand(1000000, 9999999));
             $validated['expire_date'] = Carbon::now()->addDays(30);

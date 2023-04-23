@@ -90,7 +90,7 @@ class VoiceCallController extends GetxController {
     );
 
     await engine.joinChannel(
-      token: "007eJxTYPj3g2950BZGlkl38i9W20Tt+fvu9f+U1Z88THd6KwmtXtWuwGBmbm6SZpSclJacYmqSZmmeaJJkkGxoZJZikWphbGxofmiXZUpDICNDF9MWVkYGCATx2RlSknSTMxJLGBgAY3ciRA==", 
+      token: "007eJxTYEiOeWY29YS5xa0cM+6asFUZXw4f7RSK6ijctujldPb2qjcKDGbm5iZpRslJackppiZpluaJJkkGyYZGZikWqRbGxobmX2a6pjQEMjLUGExgYIRCEJ+dISVJNzkjsYSBAQDjiyEI", 
       channelId: "db-chat", 
       uid: 0, 
       options: ChannelMediaOptions(
